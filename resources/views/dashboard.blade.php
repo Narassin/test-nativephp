@@ -1,4 +1,4 @@
-@extends('components.app')
+@extends('layout.app')
 
 @section('content')
     <h2 class="mb-4">Dashboard</h2>
@@ -37,8 +37,31 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            DataTable here
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-3">Sales</h5>
+                </div>
+                <div class="card-body px-2">
+                    <div class="card-datatable table-responsive text-nowrap">
+                        <table class="datatables-basic table" id="sale_datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Stock</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    @push('scripts')
+    <script>
+
+    </script>
+    @endpush
 @endsection
